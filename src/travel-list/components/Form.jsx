@@ -10,6 +10,7 @@ export default function Form({ handleAddItems }) {
     if (!description) return;
     const newItem = { description, quantity, packed: false, id: Date.now() };
     handleAddItems(newItem);
+    setDesciption("");
   };
   return (
     <form className="add-form" onSubmit={handleSubmit}>
